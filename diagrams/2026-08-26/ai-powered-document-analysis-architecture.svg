@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill:#0f172a; }
+      .subtitle { font: 14px Arial, sans-serif; fill:#475569; }
+      .actor { fill:#fff7ed; stroke:#ea580c; stroke-width:2.5; }
+      .service { fill:#eff6ff; stroke:#2563eb; stroke-width:2.5; }
+      .data { fill:#f0fdf4; stroke:#16a34a; stroke-width:2.5; }
+      .ai { fill:#fdf4ff; stroke:#a21caf; stroke-width:2.5; }
+      .ops { fill:#f1f5f9; stroke:#64748b; stroke-width:2.5; }
+      .boundary { fill:#f8fafc; stroke:#94a3b8; stroke-width:2; stroke-dasharray:8 6; }
+      .text { font: 700 17px Arial, sans-serif; fill:#0f172a; text-anchor:middle; dominant-baseline:middle; }
+      .small { font: 13px Arial, sans-serif; fill:#475569; text-anchor:middle; dominant-baseline:middle; }
+      .label { font: 700 12px Arial, sans-serif; fill:#334155; text-anchor:middle; dominant-baseline:middle; }
+      .edge { stroke:#334155; stroke-width:2.5; fill:none; marker-end:url(#arrow); }
+      .dash { stroke:#64748b; stroke-width:2.2; fill:none; stroke-dasharray:7 5; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <text x="700" y="45" class="title" text-anchor="middle">AI-Powered Document Analysis System Architecture</text>
+  <text x="700" y="72" class="subtitle" text-anchor="middle">Users upload documents, an AI agent extracts information, searches relevant data, generates insights, and returns final results</text>
+
+  <rect x="300" y="120" width="850" height="610" rx="24" class="boundary"/>
+  <text x="725" y="148" class="subtitle" text-anchor="middle">AI Document Analysis Platform</text>
+
+  <ellipse cx="110" cy="300" rx="75" ry="48" class="actor"/>
+  <text x="110" y="293" class="text">User</text>
+  <text x="110" y="316" class="small">uploads docs</text>
+
+  <rect x="235" y="255" width="170" height="90" rx="16" class="service"/>
+  <text x="320" y="285" class="text">Web Portal</text>
+  <text x="320" y="309" class="small">Upload API</text>
+  <text x="320" y="328" class="small">result viewer</text>
+
+  <path d="M485 230 h130 a22 22 0 0 1 22 22 v60 a22 22 0 0 1 -22 22 h-130 a22 22 0 0 1 -22 -22 v-60 a22 22 0 0 1 22 -22 z" class="data"/>
+  <text x="550" y="272" class="text">Document</text>
+  <text x="550" y="296" class="small">Storage</text>
+
+  <rect x="465" y="390" width="170" height="80" rx="16" class="service"/>
+  <text x="550" y="420" class="text">Job Queue</text>
+  <text x="550" y="444" class="small">async analysis jobs</text>
+
+  <rect x="710" y="255" width="190" height="90" rx="16" class="ai"/>
+  <text x="805" y="285" class="text">AI Agent</text>
+  <text x="805" y="309" class="small">Orchestrator</text>
+  <text x="805" y="328" class="small">workflow control</text>
+
+  <rect x="710" y="415" width="190" height="95" rx="16" class="service"/>
+  <text x="805" y="445" class="text">Parser &amp;</text>
+  <text x="805" y="469" class="text">Extractor</text>
+  <text x="805" y="492" class="small">entities, fields, summary</text>
+
+  <rect x="990" y="240" width="190" height="90" rx="16" class="service"/>
+  <text x="1085" y="270" class="text">Search /</text>
+  <text x="1085" y="294" class="text">Retrieval</text>
+  <text x="1085" y="317" class="small">finds relevant data</text>
+
+  <path d="M1235 240 h125 a22 22 0 0 1 22 22 v58 a22 22 0 0 1 -22 22 h-125 a22 22 0 0 1 -22 -22 v-58 a22 22 0 0 1 22 -22 z" class="data"/>
+  <text x="1297" y="274" class="text">Knowledge Base</text>
+  <text x="1297" y="298" class="small">enterprise data</text>
+  <text x="1297" y="317" class="small">policies, records</text>
+
+  <rect x="990" y="415" width="190" height="95" rx="16" class="service"/>
+  <text x="1085" y="445" class="text">Prompt Builder</text>
+  <text x="1085" y="469" class="small">document facts +</text>
+  <text x="1085" y="492" class="small">retrieved context</text>
+
+  <rect x="710" y="575" width="190" height="95" rx="16" class="ai"/>
+  <text x="805" y="605" class="text">LLM Insight</text>
+  <text x="805" y="629" class="text">Generator</text>
+  <text x="805" y="652" class="small">insights, risks, actions</text>
+
+  <path d="M485 590 h130 a22 22 0 0 1 22 22 v58 a22 22 0 0 1 -22 22 h-130 a22 22 0 0 1 -22 -22 v-58 a22 22 0 0 1 22 -22 z" class="data"/>
+  <text x="550" y="625" class="text">Results</text>
+  <text x="550" y="649" class="small">Repository</text>
+  <text x="550" y="668" class="small">final analysis</text>
+
+  <path d="M1040 610 h125 a22 22 0 0 1 22 22 v58 a22 22 0 0 1 -22 22 h-125 a22 22 0 0 1 -22 -22 v-58 a22 22 0 0 1 22 -22 z" class="ops"/>
+  <text x="1102" y="644" class="text">Audit Logs</text>
+  <text x="1102" y="668" class="small">feedback, monitoring</text>
+
+  <path d="M185 300 L230 300" class="edge"/>
+  <text x="207" y="282" class="label">1. upload</text>
+
+  <path d="M405 282 C425 260 440 260 458 265" class="edge"/>
+  <text x="435" y="245" class="label">2. store file</text>
+
+  <path d="M405 330 C435 370 445 405 460 425" class="edge"/>
+  <text x="435" y="387" class="label">3. submit job</text>
+
+  <path d="M635 430 C670 400 690 350 705 318" class="edge"/>
+  <text x="675" y="380" class="label">4. pick job</text>
+
+  <path d="M805 345 L805 410" class="edge"/>
+  <text x="835" y="380" class="label">5. extract</text>
+
+  <path d="M637 282 C675 350 710 390 755 413" class="edge"/>
+  <text x="673" y="338" class="label">fetch doc</text>
+
+  <path d="M900 300 L985 285" class="edge"/>
+  <text x="943" y="270" class="label">6. search</text>
+
+  <path d="M1180 285 L1208 285" class="edge"/>
+  <text x="1195" y="267" class="label">query</text>
+
+  <path d="M1213 318 C1190 370 1145 405 1100 412" class="edge"/>
+  <text x="1180" y="385" class="label">7. context</text>
+
+  <path d="M900 462 L985 462" class="edge"/>
+  <text x="943" y="444" class="label">facts</text>
+
+  <path d="M1085 510 C1045 570 965 615 905 623" class="edge"/>
+  <text x="1003" y="592" class="label">8. prompt</text>
+
+  <path d="M710 622 C635 610 585 590 552 515 C525 455 595 398 705 318" class="edge"/>
+  <text x="625" y="548" class="label">9. insights</text>
+
+  <path d="M710 640 L642 640" class="edge"/>
+  <text x="675" y="622" class="label">10. save result</text>
+
+  <path d="M463 640 C360 600 320 475 320 350" class="edge"/>
+  <text x="345" y="590" class="label">11. final result</text>
+
+  <path d="M235 318 C190 400 145 402 115 350" class="edge"/>
+  <text x="175" y="388" class="label">12. display / download</text>
+
+  <path d="M900 640 L1013 655" class="dash"/>
+  <text x="960" y="635" class="label">audit trail</text>
+
+  <rect x="50" y="775" width="1300" height="68" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="700" y="802" class="subtitle" text-anchor="middle">Security and governance controls can be applied across the flow: access control, virus scanning, PII redaction, encryption, audit logging, and human review.</text>
+  <text x="700" y="827" class="subtitle" text-anchor="middle">The LLM receives extracted document facts plus retrieved context so outputs are grounded in source content and relevant enterprise data.</text>
+</svg>
