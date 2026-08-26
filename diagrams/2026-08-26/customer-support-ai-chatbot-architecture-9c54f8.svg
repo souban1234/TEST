@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill:#0f172a; }
+      .subtitle { font: 14px Arial, sans-serif; fill:#475569; }
+      .box { fill:#ffffff; stroke:#2563eb; stroke-width:2; rx:18; }
+      .service { fill:#eff6ff; stroke:#2563eb; stroke-width:2; rx:16; }
+      .data { fill:#f0fdf4; stroke:#16a34a; stroke-width:2; }
+      .llm { fill:#fdf4ff; stroke:#a21caf; stroke-width:2; rx:16; }
+      .user { fill:#fff7ed; stroke:#ea580c; stroke-width:2; }
+      .text { font: 700 17px Arial, sans-serif; fill:#0f172a; text-anchor:middle; }
+      .small { font: 13px Arial, sans-serif; fill:#475569; text-anchor:middle; }
+      .label { font: 12px Arial, sans-serif; fill:#334155; text-anchor:middle; }
+      .arrow { stroke:#334155; stroke-width:2.5; fill:none; marker-end:url(#arrow); }
+      .dash { stroke:#64748b; stroke-width:2; fill:none; stroke-dasharray:7 5; marker-end:url(#arrow); }
+      .boundary { fill:#f8fafc; stroke:#94a3b8; stroke-width:2; stroke-dasharray:8 6; rx:22; }
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="45" class="title" text-anchor="middle">Customer Support AI Chatbot - System Architecture</text>
+  <text x="600" y="70" class="subtitle" text-anchor="middle">User query → retrieve relevant knowledge → generate answer with LLM → return response</text>
+
+  <rect x="285" y="105" width="820" height="500" class="boundary"/>
+  <text x="695" y="130" class="subtitle" text-anchor="middle">AI Chatbot Platform</text>
+
+  <ellipse cx="110" cy="265" rx="75" ry="48" class="user"/>
+  <text x="110" y="260" class="text">Customer</text>
+  <text x="110" y="282" class="small">asks question</text>
+
+  <rect x="250" y="220" width="165" height="90" class="service"/>
+  <text x="332.5" y="252" class="text">Chat UI / API</text>
+  <text x="332.5" y="276" class="small">receives user query</text>
+  <text x="332.5" y="294" class="small">returns final answer</text>
+
+  <rect x="475" y="220" width="175" height="90" class="service"/>
+  <text x="562.5" y="252" class="text">Chatbot</text>
+  <text x="562.5" y="276" class="small">orchestrator</text>
+  <text x="562.5" y="294" class="small">manages workflow</text>
+
+  <path d="M750 220 h160 a20 20 0 0 1 20 20 v50 a20 20 0 0 1 -20 20 h-160 a20 20 0 0 1 -20 -20 v-50 a20 20 0 0 1 20 -20 z" class="data"/>
+  <text x="830" y="252" class="text">Knowledge Base</text>
+  <text x="830" y="276" class="small">FAQs, docs, tickets</text>
+  <text x="830" y="294" class="small">relevant information</text>
+
+  <rect x="475" y="400" width="175" height="95" class="llm"/>
+  <text x="562.5" y="432" class="text">LLM</text>
+  <text x="562.5" y="456" class="small">generates grounded</text>
+  <text x="562.5" y="474" class="small">support response</text>
+
+  <rect x="750" y="400" width="180" height="95" class="service"/>
+  <text x="840" y="432" class="text">Prompt Context</text>
+  <text x="840" y="456" class="small">user query + retrieved</text>
+  <text x="840" y="474" class="small">knowledge snippets</text>
+
+  <path d="M185 265 L245 265" class="arrow"/>
+  <text x="215" y="248" class="label">1. user query</text>
+  <path d="M415 265 L470 265" class="arrow"/>
+  <text x="442" y="248" class="label">2. forward query</text>
+  <path d="M650 265 L725 265" class="arrow"/>
+  <text x="687" y="248" class="label">3. search KB</text>
+  <path d="M730 292 C680 345 650 365 615 398" class="arrow"/>
+  <text x="695" y="355" class="label">4. relevant info</text>
+  <path d="M650 448 L745 448" class="dash"/>
+  <text x="698" y="431" class="label">context package</text>
+  <path d="M748 410 C690 370 625 350 585 315" class="arrow"/>
+  <text x="660" y="381" class="label">5. prompt</text>
+  <path d="M475 448 C390 420 345 360 333 315" class="arrow"/>
+  <text x="390" y="400" class="label">6. generated answer</text>
+  <path d="M250 292 C205 345 170 350 125 315" class="arrow"/>
+  <text x="170" y="362" class="label">7. answer returned</text>
+
+  <rect x="300" y="540" width="780" height="44" fill="#f1f5f9" stroke="#cbd5e1" rx="10"/>
+  <text x="690" y="568" class="subtitle" text-anchor="middle">Optional operational layer: logging, analytics, feedback, monitoring, and escalation to human support</text>
+</svg>
