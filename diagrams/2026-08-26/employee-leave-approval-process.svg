@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1050" viewBox="0 0 1100 1050">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill:#0f172a; }
+      .subtitle { font: 14px Arial, sans-serif; fill:#475569; }
+      .node { fill:#eff6ff; stroke:#2563eb; stroke-width:2.5; }
+      .startend { fill:#f1f5f9; stroke:#475569; stroke-width:2.5; }
+      .decision { fill:#fff7ed; stroke:#ea580c; stroke-width:2.5; }
+      .approved { fill:#f0fdf4; stroke:#16a34a; stroke-width:2.5; }
+      .rejected { fill:#fef2f2; stroke:#dc2626; stroke-width:2.5; }
+      .text { font: 700 17px Arial, sans-serif; fill:#0f172a; text-anchor:middle; dominant-baseline:middle; }
+      .small { font: 13px Arial, sans-serif; fill:#475569; text-anchor:middle; dominant-baseline:middle; }
+      .edge { stroke:#334155; stroke-width:2.5; fill:none; marker-end:url(#arrow); }
+      .label { font: 700 13px Arial, sans-serif; fill:#334155; text-anchor:middle; dominant-baseline:middle; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="1050" fill="#ffffff"/>
+  <text x="550" y="45" class="title" text-anchor="middle">Employee Leave Approval Process</text>
+  <text x="550" y="72" class="subtitle" text-anchor="middle">From leave request submission to manager approval or rejection</text>
+
+  <rect x="420" y="105" width="260" height="58" rx="29" class="startend"/>
+  <text x="550" y="134" class="text">Start</text>
+
+  <rect x="390" y="205" width="320" height="72" rx="14" class="node"/>
+  <text x="550" y="232" class="text">Employee submits</text>
+  <text x="550" y="255" class="small">leave request</text>
+
+  <rect x="390" y="320" width="320" height="72" rx="14" class="node"/>
+  <text x="550" y="347" class="text">HR / Leave system</text>
+  <text x="550" y="370" class="small">records request</text>
+
+  <rect x="390" y="435" width="320" height="72" rx="14" class="node"/>
+  <text x="550" y="462" class="text">Manager reviews</text>
+  <text x="550" y="485" class="small">request details</text>
+
+  <path d="M550 545 L725 625 L550 705 L375 625 Z" class="decision"/>
+  <text x="550" y="615" class="text">Leave balance</text>
+  <text x="550" y="640" class="small">available?</text>
+
+  <path d="M550 735 L725 815 L550 895 L375 815 Z" class="decision"/>
+  <text x="550" y="805" class="text">Work coverage</text>
+  <text x="550" y="830" class="small">acceptable?</text>
+
+  <rect x="775" y="780" width="245" height="70" rx="14" class="approved"/>
+  <text x="897.5" y="807" class="text">Approve request</text>
+  <text x="897.5" y="830" class="small">manager approval</text>
+
+  <rect x="80" y="590" width="245" height="70" rx="14" class="rejected"/>
+  <text x="202.5" y="617" class="text">Reject request</text>
+  <text x="202.5" y="640" class="small">manager rejection</text>
+
+  <rect x="775" y="900" width="245" height="70" rx="14" class="approved"/>
+  <text x="897.5" y="927" class="text">Update records</text>
+  <text x="897.5" y="950" class="small">calendar and leave balance</text>
+
+  <rect x="80" y="710" width="245" height="70" rx="14" class="rejected"/>
+  <text x="202.5" y="737" class="text">Record reason</text>
+  <text x="202.5" y="760" class="small">for rejection</text>
+
+  <rect x="390" y="930" width="320" height="72" rx="14" class="node"/>
+  <text x="550" y="957" class="text">Notify employee</text>
+  <text x="550" y="980" class="small">approval or rejection outcome</text>
+
+  <rect x="420" y="1030" width="260" height="58" rx="29" class="startend" transform="translate(0 -80)"/>
+  <text x="550" y="979" class="text">End</text>
+
+  <path d="M550 163 L550 200" class="edge"/>
+  <path d="M550 277 L550 315" class="edge"/>
+  <path d="M550 392 L550 430" class="edge"/>
+  <path d="M550 507 L550 540" class="edge"/>
+  <path d="M550 705 L550 730" class="edge"/>
+  <text x="585" y="718" class="label">Yes</text>
+
+  <path d="M375 625 L330 625" class="edge"/>
+  <text x="355" y="605" class="label">No</text>
+
+  <path d="M725 815 L770 815" class="edge"/>
+  <text x="747" y="795" class="label">Yes</text>
+
+  <path d="M375 815 C335 815 305 785 285 780" class="edge"/>
+  <text x="340" y="795" class="label">No</text>
+
+  <path d="M897.5 850 L897.5 895" class="edge"/>
+  <path d="M897.5 970 C897.5 1010 720 1010 660 985" class="edge"/>
+  <path d="M202.5 660 L202.5 705" class="edge"/>
+  <path d="M202.5 780 C202.5 905 365 945 385 960" class="edge"/>
+
+  <rect x="740" y="110" width="285" height="135" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="882.5" y="138" class="text">Legend</text>
+  <rect x="765" y="158" width="32" height="22" rx="5" class="node"/>
+  <text x="905" y="169" class="small">Process step</text>
+  <path d="M781 188 L812 202 L781 216 L750 202 Z" class="decision"/>
+  <text x="905" y="202" class="small">Decision</text>
+  <rect x="765" y="220" width="32" height="22" rx="5" class="approved"/>
+  <text x="905" y="231" class="small">Approved path</text>
+</svg>
