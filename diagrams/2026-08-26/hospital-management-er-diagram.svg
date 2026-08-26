@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill:#0f172a; }
+      .subtitle { font: 14px Arial, sans-serif; fill:#475569; }
+      .entity { fill:#ffffff; stroke:#2563eb; stroke-width:2.5; }
+      .header { fill:#eff6ff; stroke:#2563eb; stroke-width:2.5; }
+      .pk { font: 700 14px Arial, sans-serif; fill:#0f172a; }
+      .fk { font: 700 14px Arial, sans-serif; fill:#7c2d12; }
+      .attr { font: 13px Arial, sans-serif; fill:#334155; }
+      .entityTitle { font: 700 18px Arial, sans-serif; fill:#0f172a; text-anchor:middle; dominant-baseline:middle; }
+      .edge { stroke:#334155; stroke-width:2.4; fill:none; marker-end:url(#arrow); }
+      .rel { font: 700 13px Arial, sans-serif; fill:#334155; text-anchor:middle; dominant-baseline:middle; }
+      .card { font: 700 14px Arial, sans-serif; fill:#0f172a; text-anchor:middle; dominant-baseline:middle; }
+      .legend { fill:#f8fafc; stroke:#cbd5e1; stroke-width:2; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="1050" fill="#ffffff"/>
+  <text x="750" y="45" class="title" text-anchor="middle">Hospital Management System - ER Diagram</text>
+  <text x="750" y="72" class="subtitle" text-anchor="middle">Entities, primary keys, foreign keys, and cardinal relationships for patients, doctors, appointments, departments, prescriptions, and medical records</text>
+
+  <g id="department">
+    <rect x="60" y="150" width="310" height="200" rx="12" class="entity"/>
+    <rect x="60" y="150" width="310" height="42" rx="12" class="header"/>
+    <text x="215" y="172" class="entityTitle">DEPARTMENT</text>
+    <text x="85" y="220" class="pk">PK department_id</text>
+    <text x="85" y="248" class="attr">department_name</text>
+    <text x="85" y="276" class="attr">location</text>
+    <text x="85" y="304" class="attr">phone_extension</text>
+  </g>
+
+  <g id="doctor">
+    <rect x="520" y="120" width="330" height="260" rx="12" class="entity"/>
+    <rect x="520" y="120" width="330" height="42" rx="12" class="header"/>
+    <text x="685" y="142" class="entityTitle">DOCTOR</text>
+    <text x="545" y="190" class="pk">PK doctor_id</text>
+    <text x="545" y="218" class="fk">FK department_id</text>
+    <text x="545" y="246" class="attr">first_name</text>
+    <text x="545" y="274" class="attr">last_name</text>
+    <text x="545" y="302" class="attr">specialization</text>
+    <text x="545" y="330" class="attr">phone</text>
+    <text x="545" y="358" class="attr">email</text>
+  </g>
+
+  <g id="patient">
+    <rect x="60" y="510" width="310" height="285" rx="12" class="entity"/>
+    <rect x="60" y="510" width="310" height="42" rx="12" class="header"/>
+    <text x="215" y="532" class="entityTitle">PATIENT</text>
+    <text x="85" y="580" class="pk">PK patient_id</text>
+    <text x="85" y="608" class="attr">first_name</text>
+    <text x="85" y="636" class="attr">last_name</text>
+    <text x="85" y="664" class="attr">date_of_birth</text>
+    <text x="85" y="692" class="attr">gender</text>
+    <text x="85" y="720" class="attr">phone</text>
+    <text x="85" y="748" class="attr">email</text>
+    <text x="85" y="776" class="attr">address</text>
+  </g>
+
+  <g id="appointment">
+    <rect x="520" y="485" width="330" height="260" rx="12" class="entity"/>
+    <rect x="520" y="485" width="330" height="42" rx="12" class="header"/>
+    <text x="685" y="507" class="entityTitle">APPOINTMENT</text>
+    <text x="545" y="555" class="pk">PK appointment_id</text>
+    <text x="545" y="583" class="fk">FK patient_id</text>
+    <text x="545" y="611" class="fk">FK doctor_id</text>
+    <text x="545" y="639" class="attr">appointment_datetime</text>
+    <text x="545" y="667" class="attr">reason</text>
+    <text x="545" y="695" class="attr">status</text>
+  </g>
+
+  <g id="medical_record">
+    <rect x="1030" y="150" width="360" height="285" rx="12" class="entity"/>
+    <rect x="1030" y="150" width="360" height="42" rx="12" class="header"/>
+    <text x="1210" y="172" class="entityTitle">MEDICAL_RECORD</text>
+    <text x="1055" y="220" class="pk">PK record_id</text>
+    <text x="1055" y="248" class="fk">FK patient_id</text>
+    <text x="1055" y="276" class="fk">FK doctor_id</text>
+    <text x="1055" y="304" class="fk">FK appointment_id</text>
+    <text x="1055" y="332" class="attr">record_date</text>
+    <text x="1055" y="360" class="attr">diagnosis</text>
+    <text x="1055" y="388" class="attr">treatment_notes</text>
+    <text x="1055" y="416" class="attr">test_results</text>
+  </g>
+
+  <g id="prescription">
+    <rect x="1015" y="560" width="375" height="315" rx="12" class="entity"/>
+    <rect x="1015" y="560" width="375" height="42" rx="12" class="header"/>
+    <text x="1202.5" y="582" class="entityTitle">PRESCRIPTION</text>
+    <text x="1040" y="630" class="pk">PK prescription_id</text>
+    <text x="1040" y="658" class="fk">FK patient_id</text>
+    <text x="1040" y="686" class="fk">FK doctor_id</text>
+    <text x="1040" y="714" class="fk">FK appointment_id</text>
+    <text x="1040" y="742" class="fk">FK record_id</text>
+    <text x="1040" y="770" class="attr">prescription_date</text>
+    <text x="1040" y="798" class="attr">medication_name</text>
+    <text x="1040" y="826" class="attr">dosage</text>
+    <text x="1040" y="854" class="attr">instructions</text>
+  </g>
+
+  <path d="M370 250 L515 250" class="edge"/>
+  <text x="442" y="229" class="rel">employs</text>
+  <text x="392" y="268" class="card">1</text>
+  <text x="492" y="268" class="card">0..*</text>
+
+  <path d="M370 650 L515 615" class="edge"/>
+  <text x="442" y="612" class="rel">books</text>
+  <text x="392" y="668" class="card">1</text>
+  <text x="492" y="638" class="card">0..*</text>
+
+  <path d="M685 380 L685 480" class="edge"/>
+  <text x="735" y="430" class="rel">attends</text>
+  <text x="707" y="402" class="card">1</text>
+  <text x="710" y="462" class="card">0..*</text>
+
+  <path d="M370 585 C620 430 835 315 1025 292" class="edge"/>
+  <text x="690" y="410" class="rel">has</text>
+  <text x="392" y="575" class="card">1</text>
+  <text x="1000" y="275" class="card">0..*</text>
+
+  <path d="M850 230 L1025 245" class="edge"/>
+  <text x="938" y="218" class="rel">creates</text>
+  <text x="872" y="250" class="card">1</text>
+  <text x="1000" y="265" class="card">0..*</text>
+
+  <path d="M850 560 C935 505 995 445 1030 385" class="edge"/>
+  <text x="960" y="490" class="rel">produces</text>
+  <text x="872" y="545" class="card">1</text>
+  <text x="1005" y="410" class="card">0..1</text>
+
+  <path d="M850 650 L1010 690" class="edge"/>
+  <text x="930" y="650" class="rel">results in</text>
+  <text x="875" y="671" class="card">1</text>
+  <text x="990" y="710" class="card">0..*</text>
+
+  <path d="M370 735 C585 875 800 820 1010 760" class="edge"/>
+  <text x="690" y="860" class="rel">receives</text>
+  <text x="392" y="760" class="card">1</text>
+  <text x="990" y="785" class="card">0..*</text>
+
+  <path d="M850 350 C965 500 1025 610 1050 650" class="edge"/>
+  <text x="960" y="535" class="rel">writes</text>
+  <text x="865" y="370" class="card">1</text>
+  <text x="1035" y="625" class="card">0..*</text>
+
+  <path d="M1210 435 L1205 555" class="edge"/>
+  <text x="1265" y="495" class="rel">references</text>
+  <text x="1230" y="458" class="card">1</text>
+  <text x="1227" y="535" class="card">0..*</text>
+
+  <rect x="80" y="900" width="1320" height="95" rx="14" class="legend"/>
+  <text x="740" y="927" class="subtitle" text-anchor="middle">Key: PK = Primary Key, FK = Foreign Key. Cardinality labels show one-to-many, optional one, and optional many relationships.</text>
+  <text x="740" y="953" class="subtitle" text-anchor="middle">Core relationships: departments employ doctors; patients book appointments with doctors; appointments may produce medical records and prescriptions.</text>
+  <text x="740" y="979" class="subtitle" text-anchor="middle">Medical records and prescriptions retain references to patient, doctor, and appointment for traceability.</text>
+</svg>
