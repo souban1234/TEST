@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="820" viewBox="0 0 1300 820">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <marker id="openArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#334155" stroke-width="2"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill:#0f172a; }
+      .subtitle { font: 14px Arial, sans-serif; fill:#475569; }
+      .boundary { fill:#f8fafc; stroke:#94a3b8; stroke-width:2; stroke-dasharray:8 6; }
+      .component { fill:#eff6ff; stroke:#2563eb; stroke-width:2.5; }
+      .core { fill:#f0fdf4; stroke:#16a34a; stroke-width:2.5; }
+      .external { fill:#fff7ed; stroke:#ea580c; stroke-width:2.5; }
+      .diagnostic { fill:#fdf4ff; stroke:#a21caf; stroke-width:2.5; }
+      .note { fill:#fffbe6; stroke:#d6b656; stroke-width:2; }
+      .text { font: 700 17px Arial, sans-serif; fill:#0f172a; text-anchor:middle; dominant-baseline:middle; }
+      .small { font: 13px Arial, sans-serif; fill:#475569; text-anchor:middle; dominant-baseline:middle; }
+      .mono { font: 12px Consolas, Monaco, monospace; fill:#334155; text-anchor:middle; dominant-baseline:middle; }
+      .label { font: 700 12px Arial, sans-serif; fill:#334155; text-anchor:middle; dominant-baseline:middle; }
+      .edge { stroke:#334155; stroke-width:2.5; fill:none; marker-end:url(#arrow); }
+      .dep { stroke:#64748b; stroke-width:2.2; fill:none; stroke-dasharray:7 5; marker-end:url(#openArrow); }
+      .port { fill:#ffffff; stroke:#0f172a; stroke-width:2; }
+    </style>
+  </defs>
+
+  <rect width="1300" height="820" fill="#ffffff"/>
+  <text x="650" y="45" class="title" text-anchor="middle">UML Component Diagram - EAPM Accessory Power and Signal Supply</text>
+  <text x="650" y="72" class="subtitle" text-anchor="middle">Requirement: The EAPM shall supply regulated electrical power and analogue operation signals required for external vehicle-mounted accessories.</text>
+
+  <rect x="300" y="120" width="710" height="520" rx="24" class="boundary"/>
+  <text x="655" y="148" class="subtitle" text-anchor="middle">«component» EAPM - External Accessory Power Module</text>
+
+  <rect x="55" y="235" width="180" height="90" rx="16" class="external"/>
+  <rect x="70" y="247" width="20" height="14" class="port"/>
+  <rect x="70" y="267" width="20" height="14" class="port"/>
+  <text x="145" y="270" class="text">Vehicle Power</text>
+  <text x="145" y="294" class="small">battery / supply bus</text>
+
+  <rect x="55" y="385" width="180" height="90" rx="16" class="external"/>
+  <rect x="70" y="397" width="20" height="14" class="port"/>
+  <rect x="70" y="417" width="20" height="14" class="port"/>
+  <text x="145" y="420" class="text">Vehicle Control</text>
+  <text x="145" y="444" class="small">enable / commands</text>
+
+  <rect x="360" y="235" width="190" height="90" rx="16" class="component"/>
+  <rect x="375" y="247" width="20" height="14" class="port"/>
+  <rect x="375" y="267" width="20" height="14" class="port"/>
+  <text x="455" y="270" class="text">Power Input</text>
+  <text x="455" y="294" class="small">receives vehicle power</text>
+
+  <rect x="610" y="235" width="210" height="90" rx="16" class="core"/>
+  <rect x="625" y="247" width="20" height="14" class="port"/>
+  <rect x="625" y="267" width="20" height="14" class="port"/>
+  <text x="715" y="270" class="text">Power Regulation</text>
+  <text x="715" y="294" class="small">stable accessory supply</text>
+
+  <rect x="360" y="405" width="210" height="95" rx="16" class="core"/>
+  <rect x="375" y="417" width="20" height="14" class="port"/>
+  <rect x="375" y="437" width="20" height="14" class="port"/>
+  <text x="465" y="438" class="text">Analogue Signal</text>
+  <text x="465" y="462" class="text">Conditioning</text>
+  <text x="465" y="485" class="small">operation signal generation</text>
+
+  <rect x="630" y="405" width="210" height="95" rx="16" class="diagnostic"/>
+  <rect x="645" y="417" width="20" height="14" class="port"/>
+  <rect x="645" y="437" width="20" height="14" class="port"/>
+  <text x="735" y="438" class="text">Protection &amp;</text>
+  <text x="735" y="462" class="text">Diagnostics</text>
+  <text x="735" y="485" class="small">fault and load monitoring</text>
+
+  <rect x="870" y="315" width="180" height="110" rx="16" class="component"/>
+  <rect x="885" y="327" width="20" height="14" class="port"/>
+  <rect x="885" y="347" width="20" height="14" class="port"/>
+  <text x="960" y="348" class="text">Accessory</text>
+  <text x="960" y="372" class="text">Output</text>
+  <text x="960" y="397" class="small">power + analogue signals</text>
+
+  <rect x="1090" y="300" width="170" height="140" rx="16" class="external"/>
+  <rect x="1105" y="312" width="20" height="14" class="port"/>
+  <rect x="1105" y="332" width="20" height="14" class="port"/>
+  <text x="1175" y="345" class="text">External</text>
+  <text x="1175" y="369" class="text">Vehicle-Mounted</text>
+  <text x="1175" y="393" class="text">Accessories</text>
+  <text x="1175" y="417" class="small">loads / actuators / devices</text>
+
+  <path d="M235 280 L355 280" class="edge"/>
+  <text x="295" y="260" class="label">unregulated input power</text>
+
+  <path d="M550 280 L605 280" class="edge"/>
+  <text x="578" y="260" class="label">input supply</text>
+
+  <path d="M820 280 C850 295 865 320 870 355" class="edge"/>
+  <text x="850" y="290" class="label">regulated power</text>
+
+  <path d="M235 430 L355 452" class="edge"/>
+  <text x="295" y="415" class="label">operation command</text>
+
+  <path d="M570 452 L865 382" class="edge"/>
+  <text x="720" y="400" class="label">analogue operation signals</text>
+
+  <path d="M735 405 C725 370 720 350 718 328" class="dep"/>
+  <text x="760" y="360" class="label">monitors</text>
+
+  <path d="M840 452 C895 445 930 435 955 428" class="dep"/>
+  <text x="900" y="470" class="label">load / fault status</text>
+
+  <path d="M1050 370 L1085 370" class="edge"/>
+  <text x="1067" y="350" class="label">supplies</text>
+
+  <path d="M640 575 h-250 a18 18 0 0 1 -18 -18 v-18 h520 v18 a18 18 0 0 1 -18 18 z" class="note"/>
+  <text x="632" y="545" class="text">System Responsibility</text>
+  <text x="632" y="568" class="small">EAPM provides regulated electrical power and analogue operation signals needed by external accessories.</text>
+
+  <rect x="65" y="665" width="1170" height="90" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="650" y="692" class="subtitle" text-anchor="middle">Interface Summary: Vehicle power enters EAPM through the Power Input Interface; vehicle control commands enter the Analogue Signal Conditioning component.</text>
+  <text x="650" y="718" class="subtitle" text-anchor="middle">EAPM regulates the power, generates/conditions analogue operating signals, protects the output, and supplies the external vehicle-mounted accessories.</text>
+</svg>
