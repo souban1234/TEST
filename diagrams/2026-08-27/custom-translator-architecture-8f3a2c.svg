@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Custom Translator Architecture</title>
+  <desc id="desc">Architecture diagram showing user, translator UI, API, preprocessing, translation memory, custom glossary, translation orchestration, machine translation, LLM adaptation, quality checks, post processing, feedback and analytics.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#455a64"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .title{font:700 30px Arial,Helvetica,sans-serif;fill:#263238}.subtitle{font:14px Arial,Helvetica,sans-serif;fill:#607d8b}.nodeText{font:600 15px Arial,Helvetica,sans-serif;fill:#263238}.small{font:12px Arial,Helvetica,sans-serif;fill:#455a64}.edge{fill:none;stroke:#455a64;stroke-width:2.2;marker-end:url(#arrow)}.feedback{fill:none;stroke:#7b1fa2;stroke-width:2.2;stroke-dasharray:7 5;marker-end:url(#arrow)}.user{fill:#e1f5fe;stroke:#0288d1}.app{fill:#e8f5e9;stroke:#2e7d32}.data{fill:#fff3e0;stroke:#ef6c00}.ai{fill:#f3e5f5;stroke:#7b1fa2}.box{stroke-width:2;filter:url(#shadow)}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="#ffffff"/>
+  <text x="700" y="45" text-anchor="middle" class="title">Custom Translator Architecture</text>
+  <text x="700" y="70" text-anchor="middle" class="subtitle">Domain-aware translation with glossary, translation memory, AI adaptation, QA, and feedback learning</text>
+
+  <g class="box user"><rect x="40" y="285" width="145" height="72" rx="36"/><text x="112.5" y="326" text-anchor="middle" class="nodeText">User</text></g>
+  <g class="box app"><rect x="230" y="285" width="155" height="72" rx="14"/><text x="307.5" y="316" text-anchor="middle" class="nodeText">Translator UI</text><text x="307.5" y="338" text-anchor="middle" class="small">web / app</text></g>
+  <g class="box app"><rect x="430" y="285" width="155" height="72" rx="14"/><text x="507.5" y="316" text-anchor="middle" class="nodeText">Translation API</text><text x="507.5" y="338" text-anchor="middle" class="small">REST / batch</text></g>
+  <g class="box app"><rect x="630" y="285" width="155" height="72" rx="14"/><text x="707.5" y="310" text-anchor="middle" class="nodeText">Auth &amp;</text><text x="707.5" y="332" text-anchor="middle" class="nodeText">Rate Limits</text></g>
+  <g class="box app"><rect x="830" y="285" width="170" height="72" rx="14"/><text x="915" y="309" text-anchor="middle" class="nodeText">Text Preprocessing</text><text x="915" y="333" text-anchor="middle" class="small">detect, clean, segment</text></g>
+  <g class="box app"><rect x="635" y="455" width="180" height="82" rx="14"/><text x="725" y="489" text-anchor="middle" class="nodeText">Translation</text><text x="725" y="511" text-anchor="middle" class="nodeText">Orchestrator</text></g>
+  <g class="box ai"><rect x="885" y="410" width="185" height="78" rx="14"/><text x="977.5" y="443" text-anchor="middle" class="nodeText">Machine Translation</text><text x="977.5" y="465" text-anchor="middle" class="small">baseline translation</text></g>
+  <g class="box ai"><rect x="885" y="530" width="185" height="78" rx="14"/><text x="977.5" y="557" text-anchor="middle" class="nodeText">LLM Adaptation</text><text x="977.5" y="580" text-anchor="middle" class="small">tone, domain, context</text></g>
+  <g class="box app"><rect x="1110" y="465" width="160" height="85" rx="14"/><text x="1190" y="497" text-anchor="middle" class="nodeText">Quality Checks</text><text x="1190" y="520" text-anchor="middle" class="small">terms, format, safety</text></g>
+  <g class="box app"><rect x="1110" y="285" width="160" height="72" rx="14"/><text x="1190" y="312" text-anchor="middle" class="nodeText">Post Processing</text><text x="1190" y="336" text-anchor="middle" class="small">placeholders, casing</text></g>
+
+  <g class="box data"><path d="M420 135 C420 115 580 115 580 135 L580 205 C580 225 420 225 420 205 Z"/><ellipse cx="500" cy="135" rx="80" ry="20" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/><text x="500" y="166" text-anchor="middle" class="nodeText">Translation</text><text x="500" y="188" text-anchor="middle" class="nodeText">Memory</text></g>
+  <g class="box data"><path d="M675 135 C675 115 835 115 835 135 L835 205 C835 225 675 225 675 205 Z"/><ellipse cx="755" cy="135" rx="80" ry="20" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/><text x="755" y="164" text-anchor="middle" class="nodeText">Custom Glossary</text><text x="755" y="187" text-anchor="middle" class="small">terms &amp; style rules</text></g>
+  <g class="box data"><path d="M510 610 C510 590 690 590 690 610 L690 680 C690 700 510 700 510 680 Z"/><ellipse cx="600" cy="610" rx="90" ry="20" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/><text x="600" y="641" text-anchor="middle" class="nodeText">Feedback &amp;</text><text x="600" y="663" text-anchor="middle" class="nodeText">Analytics</text></g>
+  <g class="box user"><rect x="230" y="615" width="155" height="72" rx="14"/><text x="307.5" y="645" text-anchor="middle" class="nodeText">Corrections /</text><text x="307.5" y="667" text-anchor="middle" class="nodeText">Feedback</text></g>
+
+  <path class="edge" d="M185 321 H230"/><path class="edge" d="M385 321 H430"/><path class="edge" d="M585 321 H630"/><path class="edge" d="M785 321 H830"/>
+  <path class="edge" d="M915 357 V496 H635"/>
+  <path class="edge" d="M500 225 V496 H635"/>
+  <path class="edge" d="M755 225 V455"/>
+  <path class="edge" d="M815 496 H885"/>
+  <path class="edge" d="M815 496 C850 496 850 569 885 569"/>
+  <path class="edge" d="M1070 449 H1110"/>
+  <path class="edge" d="M1070 569 C1090 569 1090 508 1110 508"/>
+  <path class="edge" d="M1190 465 V357"/>
+  <path class="edge" d="M1110 321 H1000"/>
+  <path class="edge" d="M830 321 H385"/>
+  <path class="feedback" d="M112.5 357 V651 H230"/>
+  <path class="feedback" d="M385 651 H510"/>
+  <path class="feedback" d="M600 610 V225"/>
+  <path class="feedback" d="M650 610 C720 570 750 300 755 225"/>
+
+  <rect x="1030" y="645" width="285" height="64" rx="10" fill="#fafafa" stroke="#cfd8dc"/>
+  <line x1="1050" y1="668" x2="1110" y2="668" class="edge" marker-end="none"/><text x="1122" y="672" class="small">Primary translation flow</text>
+  <line x1="1050" y1="692" x2="1110" y2="692" class="feedback" marker-end="none"/><text x="1122" y="696" class="small">Learning / feedback loop</text>
+</svg>
