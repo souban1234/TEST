@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Customer Support AI Chatbot - System Architecture</title>
+  <desc id="desc">System architecture showing a customer query moving through a chat UI, backend API, AI orchestrator, retrieval service, knowledge base, LLM service, and returning an answer to the user, with logging and human escalation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#263238"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#616161"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .title{font:700 28px Arial,Helvetica,sans-serif;fill:#1f2937}.subtitle{font:400 14px Arial,Helvetica,sans-serif;fill:#546e7a}.box{rx:16;ry:16;stroke-width:2;filter:url(#shadow)}.actor{fill:#e1f5fe;stroke:#0288d1}.front{fill:#e8f5e9;stroke:#2e7d32}.svc{fill:#fff3e0;stroke:#ef6c00}.ai{fill:#f3e5f5;stroke:#7b1fa2}.data{fill:#fce4ec;stroke:#c2185b}.ext{fill:#eeeeee;stroke:#616161}.label{font:700 16px Arial,Helvetica,sans-serif;fill:#111827;text-anchor:middle}.small{font:400 12px Arial,Helvetica,sans-serif;fill:#374151;text-anchor:middle}.edge{stroke:#263238;stroke-width:2.2;fill:none;marker-end:url(#arrow)}.dash{stroke:#616161;stroke-width:2;fill:none;stroke-dasharray:7 6;marker-end:url(#arrowDashed)}.edgeLabel{font:600 12px Arial,Helvetica,sans-serif;fill:#263238}.note{font:400 13px Arial,Helvetica,sans-serif;fill:#374151}.legend{font:400 12px Arial,Helvetica,sans-serif;fill:#374151}.num{font:700 12px Arial,Helvetica,sans-serif;fill:#ffffff;text-anchor:middle;dominant-baseline:middle}.circle{fill:#263238}
+    </style>
+  </defs>
+
+  <rect width="1400" height="760" fill="#ffffff"/>
+  <text x="700" y="42" class="title" text-anchor="middle">Customer Support AI Chatbot - System Architecture</text>
+  <text x="700" y="66" class="subtitle" text-anchor="middle">Query intake → knowledge retrieval → LLM response generation → answer returned to the customer</text>
+
+  <rect x="45" y="180" width="160" height="90" class="box actor"/>
+  <text x="125" y="216" class="label">Customer</text>
+  <text x="125" y="240" class="small">User asks a</text>
+  <text x="125" y="256" class="small">support question</text>
+
+  <rect x="250" y="180" width="180" height="90" class="box front"/>
+  <text x="340" y="211" class="label">Chat UI</text>
+  <text x="340" y="235" class="small">Web / Mobile /</text>
+  <text x="340" y="251" class="small">Messaging channel</text>
+
+  <rect x="485" y="180" width="180" height="90" class="box svc"/>
+  <text x="575" y="211" class="label">Chatbot API</text>
+  <text x="575" y="235" class="small">Receives query &amp;</text>
+  <text x="575" y="251" class="small">manages requests</text>
+
+  <rect x="720" y="180" width="200" height="90" class="box svc"/>
+  <text x="820" y="207" class="label">AI Orchestrator</text>
+  <text x="820" y="231" class="small">Session handling,</text>
+  <text x="820" y="247" class="small">prompt control</text>
+
+  <rect x="975" y="180" width="190" height="90" class="box svc"/>
+  <text x="1070" y="207" class="label">Retrieval Service</text>
+  <text x="1070" y="231" class="small">Semantic / keyword</text>
+  <text x="1070" y="247" class="small">knowledge search</text>
+
+  <path d="M1220,178 h130 a18,18 0 0 1 18,18 v58 a18,18 0 0 1 -18,18 h-130 a18,18 0 0 1 -18,-18 v-58 a18,18 0 0 1 18,-18 z" class="box data"/>
+  <ellipse cx="1285" cy="178" rx="83" ry="18" fill="#f8bbd0" stroke="#c2185b" stroke-width="2"/>
+  <text x="1285" y="211" class="label">Knowledge Base</text>
+  <text x="1285" y="235" class="small">FAQs, docs,</text>
+  <text x="1285" y="251" class="small">policies</text>
+
+  <rect x="720" y="390" width="200" height="90" class="box ai"/>
+  <text x="820" y="422" class="label">LLM Service</text>
+  <text x="820" y="446" class="small">Generates grounded</text>
+  <text x="820" y="462" class="small">answer from context</text>
+
+  <path d="M720,575 h165 a18,18 0 0 1 18,18 v58 a18,18 0 0 1 -18,18 h-165 a18,18 0 0 1 -18,-18 v-58 a18,18 0 0 1 18,-18 z" class="box data"/>
+  <ellipse cx="802.5" cy="575" rx="100.5" ry="18" fill="#f8bbd0" stroke="#c2185b" stroke-width="2"/>
+  <text x="802.5" y="610" class="label">Conversation Logs</text>
+  <text x="802.5" y="634" class="small">Analytics, audit,</text>
+  <text x="802.5" y="650" class="small">quality monitoring</text>
+
+  <rect x="485" y="575" width="180" height="90" class="box ext"/>
+  <text x="575" y="607" class="label">Human Agent</text>
+  <text x="575" y="631" class="small">Fallback / escalation</text>
+  <text x="575" y="647" class="small">when needed</text>
+
+  <path class="edge" d="M205 225 H250"/><text x="213" y="210" class="edgeLabel">1. Ask</text>
+  <path class="edge" d="M430 225 H485"/><text x="443" y="210" class="edgeLabel">2. Send query</text>
+  <path class="edge" d="M665 225 H720"/><text x="676" y="210" class="edgeLabel">Route</text>
+  <path class="edge" d="M920 225 H975"/><text x="930" y="210" class="edgeLabel">3. Search</text>
+  <path class="edge" d="M1165 225 H1202"/><text x="1167" y="210" class="edgeLabel">4. Query</text>
+
+  <path class="edge" d="M1202 258 C1135 330,1040 330,975 258"/><text x="1062" y="336" class="edgeLabel">5. Relevant snippets</text>
+  <path class="edge" d="M975 270 C945 350,900 385,842 390"/><text x="909" y="354" class="edgeLabel">6. Context</text>
+  <path class="edge" d="M820 270 V390"/><text x="834" y="333" class="edgeLabel">7. Prompt + context</text>
+  <path class="edge" d="M798 390 C760 345,760 314,785 270"/><text x="695" y="336" class="edgeLabel">8. Draft answer</text>
+  <path class="edge" d="M720 242 C650 325,650 405,720 432"/><text x="610" y="344" class="edgeLabel">9. Final response</text>
+  <path class="edge" d="M720 455 C610 520,455 520,390 270"/><text x="488" y="535" class="edgeLabel">10. Return answer</text>
+  <path class="edge" d="M250 245 C170 315,125 315,125 270"/><text x="92" y="326" class="edgeLabel">11. Display</text>
+
+  <path class="dash" d="M806 270 V575"/><text x="818" y="526" class="edgeLabel">Store conversation</text>
+  <path class="dash" d="M575 270 V575"/><text x="588" y="525" class="edgeLabel">Escalate if needed</text>
+
+  <rect x="45" y="705" width="15" height="15" fill="#fff3e0" stroke="#ef6c00"/><text x="68" y="718" class="legend">Application / service components</text>
+  <rect x="285" y="705" width="15" height="15" fill="#fce4ec" stroke="#c2185b"/><text x="308" y="718" class="legend">Data stores / knowledge sources</text>
+  <rect x="555" y="705" width="15" height="15" fill="#f3e5f5" stroke="#7b1fa2"/><text x="578" y="718" class="legend">AI / LLM capability</text>
+  <line x1="790" y1="713" x2="835" y2="713" class="dash" marker-end="none"/><text x="845" y="718" class="legend">Optional logging / escalation paths</text>
+</svg>
